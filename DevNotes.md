@@ -1,9 +1,9 @@
 
-# 🧠 Dev Notes — Flight Sniper Frontend
+# 🧠 Dev Notes — Legal Assistant Frontend
 
 ## ✈️ Project Overview
 
-This is a **React + TypeScript** single-page chatbot interface for *Flight Sniper*, a conversational assistant that helps users find the best flight deals.
+This is a **React + TypeScript** single-page chatbot interface for *Legal Assistant*, a conversational assistant that helps users find the best flight deals.
 
 It supports:
 - 💬 A simple chatbot UI (one message bubble at initialization)

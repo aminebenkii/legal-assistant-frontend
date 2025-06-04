@@ -42,7 +42,7 @@ export default function ChatMessages({
                   <ReactMarkdown
                     remarkPlugins={[[remarkGfm, { breaks: true }]]}
                     components={{
-                      p: ({ node, ...props }) => (
+                      p: (props) => (
                         <p className="my-3">{props.children}</p>
                       )
                     }}
