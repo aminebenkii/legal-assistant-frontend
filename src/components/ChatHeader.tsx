@@ -22,7 +22,7 @@ export default function ChatHeader({
           </div>
           <div className="min-w-0 pb-1">
             <h1 className="text-3xl sm:text-5xl font-bold tracking-tight bg-gradient-to-r from-cyan-300 via-indigo-300 to-purple-300 bg-clip-text text-transparent drop-shadow-2xl leading-none overflow-visible" style={{ paddingBottom: "0.2em" }}>
-              Flight Sniper
+              Legal Assistant
             </h1>
             <p className="mt-2 text-sm sm:text-lg text-indigo-200 font-medium tracking-wide leading-snug">
               {lang === "en"

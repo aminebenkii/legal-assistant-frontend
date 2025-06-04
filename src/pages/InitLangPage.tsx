@@ -21,7 +21,7 @@ export default function InitLangPage() {
             <PlaneTakeoff className="h-12 w-12 sm:h-16 sm:w-16 text-cyan-500 drop-shadow-lg" />
           </div>
           <h1 className="p-2 pt-4 text-4xl sm:text-5xl font-extrabold tracking-tight bg-gradient-to-r from-cyan-400 to-indigo-500 bg-clip-text text-transparent drop-shadow-xl">
-            Flight Sniper
+            Legal Assistant
           </h1>
         </div>
 
