@@ -148,3 +148,8 @@ _Exemples :_
     },
   },
 ]
+export const NetworkErrorMessage = {
+  en: "\u274c Sorry, I couldn't reach the flight server.",
+  fr: "\u274c D\u00e9sol\u00e9, je n'ai pas pu contacter le serveur de vols."
+}
+
