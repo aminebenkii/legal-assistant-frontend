@@ -7,11 +7,11 @@ async function getApiEndpoint(): Promise<string> {
   const config = await res.json();
   apiEndpoint = config.apiEndpoint;
 
-  if (!apiEndpoint) throw new Error("Missing API endpoint in config");
+  if (!apiEndpoint) throw new Error("Missing legal assistant backend endpoint in config");
   return apiEndpoint;
 }
 
-export async function getFlightReply({
+export async function getLegalReply({
   query,
   sessionId,
   currency,

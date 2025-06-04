@@ -2,7 +2,7 @@ import { useState, useEffect } from "react"
 import { v4 as uuidv4 } from "uuid"
 import { WelcomeMessage } from "@/data/ChatbotConfig"
 import { useLanguage } from "@/context/LanguageContext"
-import { getFlightReply } from "@/lib/api"
+import { getLegalReply } from "@/lib/api"
 
 type ChatMessage = {
   role: "user" | "assistant"
@@ -29,7 +29,7 @@ export function useChatbot(currency: string) {
     addMessage("assistant", "__TYPING__")
 
     try {
-      const reply = await getFlightReply({ query: text, sessionId, currency })
+      const reply = await getLegalReply({ query: text, sessionId, currency })
       setMessages(prev => {
         const updated = [...prev]
         const last = updated.length - 1
@@ -43,7 +43,7 @@ export function useChatbot(currency: string) {
         const updated = [...prev]
         const last = updated.length - 1
         if (updated[last].role === "assistant" && updated[last].content === "__TYPING__") {
-          updated[last] = { role: "assistant", content: "❌ Sorry, I couldn't reach the flight server." }
+          updated[last] = { role: "assistant", content: "❌ Sorry, I couldn't reach the legal assistant server." }
         }
         return updated
       })
