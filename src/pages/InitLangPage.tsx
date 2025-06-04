@@ -2,7 +2,7 @@
 
 import { useNavigate } from "react-router-dom"
 import { useLanguage } from "@/context/LanguageContext"
-import { PlaneTakeoff } from "lucide-react"
+import { Gavel } from "lucide-react"
 
 export default function InitLangPage() {
   const { setLang } = useLanguage()
@@ -18,7 +18,7 @@ export default function InitLangPage() {
       <div className="max-w-md w-full flex flex-col items-center gap-10 text-center font-[Manrope] animate-fade-in">
         <div className="flex flex-col items-center gap-3">
           <div className="p-4 bg-white shadow-lg rounded-2xl">
-            <PlaneTakeoff className="h-12 w-12 sm:h-16 sm:w-16 text-cyan-500 drop-shadow-lg" />
+            <Gavel className="h-12 w-12 sm:h-16 sm:w-16 text-cyan-500 drop-shadow-lg" />
           </div>
           <h1 className="p-2 pt-4 text-4xl sm:text-5xl font-extrabold tracking-tight bg-gradient-to-r from-cyan-400 to-indigo-500 bg-clip-text text-transparent drop-shadow-xl">
             Flight Sniper
