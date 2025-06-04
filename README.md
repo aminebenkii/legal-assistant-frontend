@@ -1,6 +1,6 @@
-# ✈️ Flight Sniper — AI Flight Deals Chatbot
+# ✈️ Legal Assistant — AI Flight Deals Chatbot
 
-**Flight Sniper** is a modern, multilingual, AI-powered chatbot interface that helps users find the cheapest flights in real time. It features a clean UI built with **React**, **Vite**, **Tailwind CSS**, and **shadcn/ui** — backed by a conversational assistant that interacts via natural language.
+**Legal Assistant** is a modern, multilingual, AI-powered chatbot interface that helps users find the cheapest flights in real time. It features a clean UI built with **React**, **Vite**, **Tailwind CSS**, and **shadcn/ui** — backed by a conversational assistant that interacts via natural language.
 
 ## 🌐 Features
 
@@ -15,7 +15,7 @@
 
 ## 📸 Preview
 
-<img src="https://user-images.githubusercontent.com/example/flight-sniper-preview.png" alt="Flight Sniper Preview" width="600" />
+<img src="https://user-images.githubusercontent.com/example/flight-sniper-preview.png" alt="Legal Assistant Preview" width="600" />
 
 ## 🚀 Getting Started
 
