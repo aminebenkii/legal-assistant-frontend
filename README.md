@@ -86,6 +86,14 @@ src/
 npm run build
 ```
 
+## 🧹 Lint your code
+
+Run ESLint to check for code quality issues:
+
+```bash
+npm run lint
+```
+
 ## 🧑‍💻 Author
 
 Made with ❤️ by **Amine Benkirane**  
