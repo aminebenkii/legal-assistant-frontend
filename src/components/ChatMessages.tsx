@@ -31,8 +31,8 @@ export default function ChatMessages({
               <div
                 className={`max-w-[80%] px-4 py-1 sm:px-5 sm:py-1 rounded-2xl text-sm sm:text-[16px] leading-relaxed font-normal
                   ${isUser
-                    ? "bg-sky-100 text-sky-900 rounded-tr-none shadow-md"
-                    : "bg-gray-100 text-gray-700 rounded-tl-none border border-gray-200 shadow-sm"
+                    ? "bg-sky-100 text-sky-900 rounded-tr-none shadow-md dark:bg-sky-700 dark:text-sky-100"
+                    : "bg-gray-100 text-gray-700 rounded-tl-none border border-gray-200 shadow-sm dark:bg-gray-700 dark:text-gray-100 dark:border-gray-600"
                   }`}
               >
                 {isTyping ? (

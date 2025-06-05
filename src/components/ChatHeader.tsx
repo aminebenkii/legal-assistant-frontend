@@ -1,12 +1,13 @@
 import { Gavel } from "lucide-react"
 import LanguageToggle from "./LanguageToggle"
+import ThemeToggle from "./ThemeToggle"
 import { useLanguage } from "@/context/LanguageContext"
 
 export default function ChatHeader() {
   const { lang } = useLanguage()
 
   return (
-    <header className="relative z-50 bg-gradient-to-tr from-[#3b2f1d] to-[#23180c] text-white shadow-2xl border-b border-white/10 backdrop-blur-xl font-sans">
+    <header className="relative z-50 bg-gradient-to-tr from-[#3b2f1d] to-[#23180c] dark:from-[#1b1b1b] dark:to-[#101010] text-white shadow-2xl border-b border-white/10 backdrop-blur-xl font-sans">
       <div className="max-w-6xl mx-auto px-6 pt-5 pb-3 sm:py-8 flex flex-wrap sm:flex-nowrap items-center justify-between gap-6 sm:gap-10">
         {/* Left: Logo + Title */}
         <div className="flex items-start gap-x-4 sm:gap-x-6 flex-grow min-w-0">
@@ -30,6 +31,7 @@ export default function ChatHeader() {
         {/* Right: Controls */}
         <div className="flex flex-wrap sm:flex-nowrap items-center gap-4 sm:gap-6">
           <LanguageToggle />
+          <ThemeToggle />
         </div>
       </div>
     </header>

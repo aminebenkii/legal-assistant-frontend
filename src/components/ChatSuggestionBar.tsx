@@ -19,12 +19,12 @@ export default function ChatSuggestionBar({
   }
 
   return (
-    <div className="w-full bg-gray-50 border-t border-gray-100 px-3 sm:px-6 py-3 flex flex-wrap justify-center gap-x-3 gap-y-2">
+    <div className="w-full bg-gray-50 dark:bg-gray-700 border-t border-gray-100 dark:border-gray-600 px-3 sm:px-6 py-3 flex flex-wrap justify-center gap-x-3 gap-y-2">
       {suggestions.map((item, idx) => (
         <Button
           key={idx}
           variant="outline"
-        className="rounded-full text-[10px] sm:text-xs font-medium px-4 py-2 bg-white shadow-md hover:bg-amber-50 hover:ring-1 hover:ring-amber-200 transition"
+        className="rounded-full text-[10px] sm:text-xs font-medium px-4 py-2 bg-white dark:bg-gray-600 dark:text-gray-100 shadow-md hover:bg-amber-50 dark:hover:bg-gray-500 hover:ring-1 hover:ring-amber-200 transition"
           onClick={() =>
             sendToChatbot(item.userText[lang], item.botReply[lang])
           }
