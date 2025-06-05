@@ -68,10 +68,10 @@ Applied in: `ChatHeader`, `ChatMessages`, `ChatSuggestionBar`, `ChatInput`
 
 | Feature               | Status     | Notes                                       |
 |----------------------|------------|---------------------------------------------|
-| Chat message state   | ❌ Missing | `ChatMessages.tsx` has only static message  |
+| Chat message state   | ✅ Done    | Chat history stored in state  |
 | Input submission     | ❌ Missing | No message-sending logic yet                |
 | Suggestions to Chat  | ⚠️ Partial | Buttons call `console.log()` only           |
-| Backend API hookup   | ❌ Missing | No real assistant API integration yet       |
+| Backend API hookup   | ✅ Done    | Connected to backend API       |
 
 ---
 
@@ -87,11 +87,11 @@ Applied in: `ChatHeader`, `ChatMessages`, `ChatSuggestionBar`, `ChatInput`
 
 ## 📌 Next Steps
 
-1. Add dynamic chat state in `ChatMessages.tsx`
-2. Wire up `ChatInput.tsx` and `ChatSuggestionBar.tsx` to add messages
-3. Connect to real backend (or stub in `sendMessage()`)
-4. Auto-scroll on new message
-5. Add typing indicator (optional)
+1. Wire up `ChatInput.tsx` and `ChatSuggestionBar.tsx` to send messages
+2. Implement auto-scroll on new messages
+3. Show a typing indicator for the assistant
+4. Add unit tests for components and API calls
+5. Polish the UI with avatars and better mobile layout
 
 ---
 
