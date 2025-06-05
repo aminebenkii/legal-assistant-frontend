@@ -7,7 +7,7 @@ export default function LanguageToggle() {
   const { lang, setLang } = useLanguage()
   const navigate = useNavigate()
 
-  const handleLangSwitch = (selectedLang: "en" | "fr") => {
+  const handleLangSwitch = (selectedLang: "en" | "fr" | "ar") => {
     if (lang !== selectedLang) {
       setLang(selectedLang)
       if (location.pathname === "/chat") {
@@ -24,8 +24,8 @@ export default function LanguageToggle() {
         className={clsx(
           "h-[38px] px-5 rounded-full text-sm font-semibold transition-all duration-300",
           lang === "en"
-            ? "bg-cyan-400/20 text-cyan-100 font-bold shadow-md"
-            : "bg-transparent text-white/80 hover:bg-cyan-400/10"
+            ? "bg-amber-400/20 text-amber-100 font-bold shadow-md"
+            : "bg-transparent text-white/80 hover:bg-amber-400/10"
         )}
       >
         English
@@ -36,11 +36,23 @@ export default function LanguageToggle() {
         className={clsx(
           "h-[38px] px-5 rounded-full text-sm font-semibold transition-all duration-300",
           lang === "fr"
-            ? "bg-cyan-400/20 text-cyan-100 font-bold shadow-md"
-            : "bg-transparent text-white/80 hover:bg-cyan-400/10"
+            ? "bg-amber-400/20 text-amber-100 font-bold shadow-md"
+            : "bg-transparent text-white/80 hover:bg-amber-400/10"
         )}
       >
         Français
+      </Button>
+      <Button
+        variant="ghost"
+        onClick={() => handleLangSwitch("ar")}
+        className={clsx(
+          "h-[38px] px-5 rounded-full text-sm font-semibold transition-all duration-300",
+          lang === "ar"
+            ? "bg-amber-400/20 text-amber-100 font-bold shadow-md"
+            : "bg-transparent text-white/80 hover:bg-amber-400/10"
+        )}
+      >
+        العربية
       </Button>
     </div>
   )
