@@ -14,18 +14,16 @@ async function getApiEndpoint(): Promise<string> {
 export async function getLegalReply({
   query,
   sessionId,
-  currency,
 }: {
   query: string;
   sessionId: string;
-  currency: string;
 }): Promise<string> {
   const API_ENDPOINT = await getApiEndpoint();
 
   const res = await fetch(API_ENDPOINT, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ sessionId, query, currency }),
+    body: JSON.stringify({ sessionId, query }),
   });
 
   const data = await res.json();

@@ -24,7 +24,7 @@ export default function ChatSuggestionBar({
         <Button
           key={idx}
           variant="outline"
-          className="rounded-full text-[10px] sm:text-xs font-medium px-4 py-2 bg-white shadow-md hover:bg-cyan-50 hover:ring-1 hover:ring-cyan-200 transition"
+        className="rounded-full text-[10px] sm:text-xs font-medium px-4 py-2 bg-white shadow-md hover:bg-amber-50 hover:ring-1 hover:ring-amber-200 transition"
           onClick={() =>
             sendToChatbot(item.userText[lang], item.botReply[lang])
           }

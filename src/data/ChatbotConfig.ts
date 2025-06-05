@@ -31,7 +31,24 @@ export const IntroMessages = {
       <p class="mt-2">Ces informations sont générales et ne constituent pas un conseil juridique.</p>
       <p class="mt-2"><em>Exemples :</em><br>
       « Comment résilier un contrat ? »<br>
-      « Quels sont mes droits de locataire au Québec ? »</p>
+    « Quels sont mes droits de locataire au Québec ? »</p>
+    `.trim()
+  },
+
+  ar: {
+    title: "هل تحتاج إلى مساعدة قانونية؟",
+    button: "ابدأ الدردشة",
+    body: `
+      <p>⚖️ <strong>كيف يعمل</strong></p>
+      <p>تحدث مع مساعدك القانوني الذكي للحصول على إجابات سريعة وروابط لمصادر مفيدة.</p>
+      <ul class="list-disc pl-5 space-y-1">
+        <li>فهم المصطلحات والإجراءات القانونية الأساسية</li>
+        <li>الحصول على توجيهات حول العقود أو العمل أو حقوق المستأجرين</li>
+      </ul>
+      <p class="mt-2">المعلومات المقدمة عامة وليست نصيحة قانونية.</p>
+      <p class="mt-2"><em>أمثلة:</em><br>
+      "كيف أفسخ عقداً؟"<br>
+      "ما هي حقوقي كمستأجر؟"</p>
     `.trim()
   }
 }
@@ -52,6 +69,13 @@ Bienvenue sur votre assistant juridique.
 Posez-moi vos questions juridiques courantes —
 je ferai de mon mieux pour vous aider. ⚖️
 `.trim()
+,
+  ar: `
+مرحباً! 👋
+أهلاً بك في مساعدك القانوني.
+اطرح أسئلتك القانونية اليومية —
+سأبذل جهدي لمساعدتك. ⚖️
+`.trim()
 }
 
 
@@ -62,10 +86,12 @@ export const suggestions = [
     label: {
       en: "FAQs",
       fr: "FAQs",
+      ar: "أسئلة شائعة",
     },
     userText: {
       en: "What are some common legal questions?",
       fr: "Quelles sont les questions juridiques courantes ?",
+      ar: "ما هي الأسئلة القانونية الشائعة؟",
     },
     botReply: {
       en: `
@@ -87,6 +113,16 @@ Voici quelques sujets souvent demandés :
 
 De quoi avez-vous besoin ?
       `.trim(),
+
+      ar: `
+إليك بعض المواضيع التي يسأل عنها الناس عادةً:
+
+- حقوق المستأجر
+- إجراءات محكمة الدعاوى الصغيرة
+- فسخ عقد
+
+بماذا يمكنني مساعدتك؟
+      `.trim(),
     },
   },
   {
@@ -94,10 +130,12 @@ De quoi avez-vous besoin ?
     label: {
       en: "Tenant Rights",
       fr: "Droits des locataires",
+      ar: "حقوق المستأجر",
     },
     userText: {
       en: "Tell me about tenant rights",
       fr: "Parle-moi des droits des locataires",
+      ar: "أخبرني عن حقوق المستأجر",
     },
     botReply: {
       en: `
@@ -107,6 +145,10 @@ I can provide general information about tenant rights, including maintenance obl
       fr: `
 Je peux fournir des informations générales sur les droits des locataires : obligations d'entretien, procédures d'expulsion et augmentations de loyer. Comment puis-je vous aider ?
       `.trim(),
+
+      ar: `
+يمكنني تزويدك بمعلومات عامة حول حقوق المستأجر مثل التزامات الصيانة وإجراءات الإخلاء وزيادات الإيجار. كيف يمكنني المساعدة؟
+      `.trim(),
     },
   },
   {
@@ -114,10 +156,12 @@ Je peux fournir des informations générales sur les droits des locataires : obl
     label: {
       en: "Help",
       fr: "Aide",
+      ar: "مساعدة",
     },
     userText: {
       en: "Help me use this app",
       fr: "Aide-moi à utiliser cette application",
+      ar: "ساعدني في استخدام هذا التطبيق",
     },
     botReply: {
       en: `
@@ -149,11 +193,26 @@ _Exemples :_
 - « Comment résilier un contrat ? »
 - « Quels sont mes droits si mon propriétaire ne répare pas mon logement ? »
 &nbsp;`,
+
+      ar: `
+⚖️ **كيف يعمل**
+اسأل عن الأسئلة القانونية اليومية وسأقدم معلومات عامة وروابط.
+
+- شرح المصطلحات القانونية الأساسية
+- إرشادات حول العقود أو العمل أو حقوق المستأجر
+
+هذا التطبيق لا يغني عن المحامي.
+
+_أمثلة:_
+- "كيف أفسخ عقداً؟"
+- "ما هي حقوقي إذا رفض المالك إصلاح شقتي؟"
+&nbsp;`,
     },
   },
 ]
 export const NetworkErrorMessage = {
-  en: "\u274c Sorry, I couldn't reach the flight server.",
-  fr: "\u274c D\u00e9sol\u00e9, je n'ai pas pu contacter le serveur de vols."
+  en: "\u274c Sorry, I couldn't reach the server.",
+  fr: "\u274c D\u00e9sol\u00e9, je n'ai pas pu contacter le serveur.",
+  ar: "\u274c عذراً، تعذر الوصول إلى الخادم."
 }
 

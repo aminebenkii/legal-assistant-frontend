@@ -3,7 +3,7 @@ import { createContext, useContext, useState } from "react"
 import type { ReactNode } from "react"
 
 
-type Language = "en" | "fr"
+type Language = "en" | "fr" | "ar"
 
 type LangContextType = {
   lang: Language
@@ -21,7 +21,7 @@ export function useLanguage() {
 export function LangProvider({ children }: { children: ReactNode }) {
   const [lang, setLangState] = useState<Language>(() => {
     const saved = localStorage.getItem("lang")
-    return (saved === "fr" || saved === "en") ? saved : "en"
+    return saved === "fr" || saved === "en" || saved === "ar" ? (saved as Language) : "en"
   })
 
   const setLang = (newLang: Language) => {

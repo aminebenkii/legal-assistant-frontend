@@ -9,7 +9,7 @@ type ChatMessage = {
   content: string
 }
 
-export function useChatbot(currency: string) {
+export function useChatbot() {
   const { lang } = useLanguage()
   const [messages, setMessages] = useState<ChatMessage[]>([
   { role: "assistant", content: WelcomeMessage[lang] }])
@@ -29,7 +29,7 @@ export function useChatbot(currency: string) {
     addMessage("assistant", "__TYPING__")
 
     try {
-      const reply = await getLegalReply({ query: text, sessionId, currency })
+      const reply = await getLegalReply({ query: text, sessionId })
       setMessages(prev => {
         const updated = [...prev]
         const last = updated.length - 1
@@ -52,5 +52,5 @@ export function useChatbot(currency: string) {
     }
   }
 
-  return { messages, addMessage, handleUserMessage, currency, setSessionId }
+  return { messages, addMessage, handleUserMessage, setSessionId }
 }

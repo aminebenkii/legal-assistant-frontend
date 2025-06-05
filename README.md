@@ -1,13 +1,11 @@
-# ✈️ Legal Assistant — AI Flight Deals Chatbot
+# ⚖️ Legal Assistant Chatbot
 
-**Legal Assistant** is a modern, multilingual, AI-powered chatbot interface that helps users find the cheapest flights in real time. It features a clean UI built with **React**, **Vite**, **Tailwind CSS**, and **shadcn/ui** — backed by a conversational assistant that interacts via natural language.
+**Legal Assistant** is a modern, multilingual chatbot interface that helps users find quick answers to common legal questions. It features a clean UI built with **React**, **Vite**, **Tailwind CSS**, and **shadcn/ui** — backed by a conversational assistant that interacts via natural language.
 
 ## 🌐 Features
 
-- 🎯 **Natural Language Flight Search** (one-way or round trip)
 - 🧠 Smart replies powered by your backend API
-- 🌍 English / French language support
-- 💱 Selectable currency (EUR, USD, MAD, GBP)
+- 🌍 English / French / Arabic language support
 - 💡 Quick suggestions to help users get started
 - 💬 Beautiful chat bubbles with Markdown rendering
 - 🪄 Typing indicator animation
@@ -22,8 +20,8 @@
 ### 1. Clone the repo
 
 ```bash
-git clone https://github.com/yourusername/flight-sniper-frontend.git
-cd flight-sniper-frontend
+git clone https://github.com/yourusername/legal-assistant-frontend.git
+cd legal-assistant-frontend
 ```
 
 ### 2. Install dependencies
@@ -58,7 +56,7 @@ src/
 ├── context/           # LanguageContext for i18n
 ├── data/              # Static chatbot content (suggestions, welcome messages)
 ├── hooks/             # Custom React hooks (useChatbot)
-├── lib/               # API helper for flight replies
+├── lib/               # API helper for legal replies
 ├── pages/             # Fullscreen pages (InitLangPage, ChatbotPage)
 ├── index.html         # Entry HTML
 ├── main.tsx           # App entrypoint
