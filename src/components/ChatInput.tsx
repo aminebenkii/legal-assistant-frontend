@@ -22,10 +22,10 @@ export default function ChatInput({ onSend }: { onSend: (text: string) => void }
   return (
     <form
       onSubmit={handleSubmit}
-      className="flex items-center gap-2 p-2 border-t bg-white rounded-b-2xl"
+      className="flex items-center gap-2 p-2 border-t bg-white dark:bg-gray-800 dark:border-gray-700 rounded-b-2xl"
     >
       <Input
-        className="flex-1 px-3 py-2 bg-transparent border-none focus:ring-0 focus:outline-none text-[16px] sm:text-sm"
+        className="flex-1 px-3 py-2 bg-transparent border-none focus:ring-0 focus:outline-none text-[16px] sm:text-sm dark:text-gray-100"
         type="text"
         placeholder={placeholder}
         value={value}
@@ -33,7 +33,7 @@ export default function ChatInput({ onSend }: { onSend: (text: string) => void }
       />
       <button
         type="submit"
-        className="rounded-full px-2.5 py-2.5 bg-blue-500 text-white hover:bg-blue-600 transition shadow"
+        className="rounded-full px-2.5 py-2.5 bg-blue-500 text-white hover:bg-blue-600 dark:bg-blue-600 dark:hover:bg-blue-500 transition shadow"
       >
         <Send className="w-5 h-5" />
       </button>
