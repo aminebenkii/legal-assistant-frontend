@@ -7,7 +7,7 @@ import { Separator } from "@/components/ui/separator"
 import { useChatbot } from "@/hooks/useChatbot"
 
 export default function ChatbotPage() {
-  const { messages, addMessage, handleUserMessage } = useChatbot()
+  const { messages, isLoading, addMessage, handleUserMessage } = useChatbot()
 
   return (
     <div className="h-dvh flex flex-col bg-gradient-to-br from-gray-50 to-gray-100 text-gray-800 dark:bg-gradient-to-br dark:from-gray-900 dark:to-gray-950 dark:text-gray-100">
@@ -17,7 +17,7 @@ export default function ChatbotPage() {
         <div className="w-full flex-1 flex flex-col min-h-0 bg-white dark:bg-gray-800 rounded-b-2xl shadow-xl border border-gray-100 dark:border-gray-700">
 
           <div className="flex-1 overflow-y-auto min-h-0">
-            <ChatMessages messages={messages} />
+            <ChatMessages messages={messages} isLoading={isLoading} />
           </div>
 
           <ChatSuggestionBar addMessage={addMessage} />
