@@ -1,5 +1,5 @@
 // src/components/ChatMessages.tsx
-import TypingDots from "./TypingDots"
+import TypingIndicator from "./TypingIndicator"
 import { useEffect, useRef } from "react"
 import { ScrollArea } from "@/components/ui/scroll-area"
 import ReactMarkdown from "react-markdown"
@@ -7,21 +7,22 @@ import remarkGfm from "remark-gfm"
 
 export default function ChatMessages({
   messages,
+  isLoading,
 }: {
   messages: { role: "user" | "assistant"; content: string }[]
+  isLoading: boolean
 }) {
   const bottomRef = useRef<HTMLDivElement | null>(null)
 
   useEffect(() => {
     bottomRef.current?.scrollIntoView({ behavior: "smooth" })
-  }, [messages])
+  }, [messages, isLoading])
 
   return (
     <ScrollArea className="flex-1 h-full px-4 py-6">
       <div className="flex flex-col gap-5 sm:gap-6">
         {messages.map((msg, i) => {
           const isUser = msg.role === "user"
-          const isTyping = msg.content === "__TYPING__"
 
           return (
             <div
@@ -35,10 +36,7 @@ export default function ChatMessages({
                     : "bg-gray-100 text-gray-700 rounded-tl-none border border-gray-200 shadow-sm dark:bg-gray-700 dark:text-gray-100 dark:border-gray-600"
                   }`}
               >
-                {isTyping ? (
-                  <TypingDots />
-                ) : (
-                  <div className="prose prose-sm sm:prose-base dark:prose-invert break-words leading-snug">
+                <div className="prose prose-sm sm:prose-base dark:prose-invert break-words leading-snug">
                   <ReactMarkdown
                     remarkPlugins={[[remarkGfm, { breaks: true }]]}
                     components={{
@@ -49,12 +47,17 @@ export default function ChatMessages({
                   >
                     {msg.content}
                   </ReactMarkdown>
-                  </div>
-                )}
+                </div>
               </div>
             </div>
           )
         })}
+
+        {isLoading && (
+          <div className="flex justify-center">
+            <TypingIndicator />
+          </div>
+        )}
 
         <div ref={bottomRef} />
       </div>

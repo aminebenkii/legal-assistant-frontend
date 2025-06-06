@@ -14,6 +14,7 @@ export function useChatbot() {
   const [messages, setMessages] = useState<ChatMessage[]>([
   { role: "assistant", content: WelcomeMessage[lang] }])
   const [sessionId, setSessionId] = useState("")
+  const [isLoading, setIsLoading] = useState(false)
 
   useEffect(() => {
     setSessionId(uuidv4())
@@ -26,18 +27,12 @@ export function useChatbot() {
 
   const handleUserMessage = async (text: string) => {
     addMessage("user", text)
-    addMessage("assistant", "__TYPING__")
+    setIsLoading(true)
 
     const reply = await getLegalReply({ query: text, sessionId, lang })
-    setMessages(prev => {
-      const updated = [...prev]
-      const last = updated.length - 1
-      if (updated[last].role === "assistant" && updated[last].content === "__TYPING__") {
-        updated[last] = { role: "assistant", content: reply }
-      }
-      return updated
-    })
+    setMessages(prev => [...prev, { role: "assistant", content: reply }])
+    setIsLoading(false)
   }
 
-  return { messages, addMessage, handleUserMessage, setSessionId }
+  return { messages, isLoading, addMessage, handleUserMessage, setSessionId }
 }
